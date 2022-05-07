@@ -16,7 +16,19 @@ export class AppComponent implements OnInit, OnDestroy {
       }, 1000);
        // setto l'intervallo in modo da farmi stampare una frase   
   }
-  ngOnDestroy(): void {
+  ngOnDestroy() { // Se non creo il metodo Destroy, continuerò a stampare l'intervallo anche quando questo non servirà più
+    if(this.intervalSub){
+      clearInterval(this.intervalSub);
+    }
       
+  }
+  title = "Hello World";
+
+  getMin(a: number,b: number)
+  {
+    if(a < b)
+      return a;
+    else
+      return b;
   }
 }
