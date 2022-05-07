@@ -1,3 +1,5 @@
 <p>parent works!</p>
 <!--Caso di Binding tra due diverse components (padre e figlia) attraverso @Input-->
 <app-child [childMessage]="'Hello from parent'"></app-child>
+<!--Richiamo l'EventEmitter e gli passo il metodo del parent per ricevere dal child-->
+<app-child (messageEvent)="receiveMessage($messageEvent)"></app-child>
