@@ -33,3 +33,19 @@ Second result is: {{getMin(3,6)}}
 <!--Si possono creare delle pipes custom (tramite cmd)-->
 <!--Richiamo la pipe "greetings" appena creata-->
 {{'World' | greetingsPipe}}
+
+<!--Property binding: aiuta a settare i valori e le proprietà degli elementi del html-->
+<img [src]="itemImageUrl">
+
+<table>
+    <tr>
+        <td [colSpan]="1 + 1">Nome dell'utente</td>
+    </tr>
+</table>
+
+<!--Altro esempio di property binding-->
+<button [disabled]="isUnchanged">Disabled button</button>
+
+<!--Per avere un risultato simile al precedente potresti usare l'interpolazione-->
+<p><img src="{{itemImageUrl}}"></p>
+<p><img [src]="itemImageUrl"></p> <!--Fanno esattamente la stessa cosa, ma in modi diversi: 1. interpolation; 2. Prop binding-->

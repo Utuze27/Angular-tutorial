@@ -44,5 +44,10 @@ export class AppComponent implements OnInit, OnDestroy {
   // funzioni che accettano qualsiasi tipo di dato in input e tornato dei dati formattati
 
   todayDate = new Date();
-  
+
+  // Property Binding
+  itemImageUrl = "../assets/avatar_icon.png";
+
+  isUnchanged = true;
+
 }
