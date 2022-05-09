@@ -3,7 +3,9 @@ import { Component, OnInit,OnChanges, OnDestroy } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  // Attribute Binding: da usare quando non puoi utilizzare la prop. binding nel seguente modo:
+  template:'<p [attr.attribute-you-are-targeting] ="expression"></p>'
 })
 
 // implemento la classe con il l'hook per inizializzare
@@ -49,5 +51,7 @@ export class AppComponent implements OnInit, OnDestroy {
   itemImageUrl = "../assets/avatar_icon.png";
 
   isUnchanged = true;
+
+  // Attribute Binding
 
 }
