@@ -1,0 +1,23 @@
+h2 {
+    color: green;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+/* Volendo puoi importare direttamente qui degli stili */
+@import url('../assets/external-style.css');
+
+:host{
+    display: block;
+    border: 3px solid red;
+}
+
+:host(.active){
+    border: 1px solid green;
+}
+/*Va ad applicare uno stile solo a determinate considizioni. In questo caso applica un background color solo se il tema è chiaro*/
+:host-context(.theme-light) h2{
+    background-color: yellowgreen;
+}

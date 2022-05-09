@@ -4,3 +4,18 @@ Say:{{childMessage}}
 
 <!--Creo un bottone e richiamo il metodo per mandare un messaggio (comp. child)-->
 <button (click)="sendMessage()">Send Message</button>
+
+<h2>Hello World</h2>
+<body>
+    <p>Sono nel body del template html</p>
+</body>
+
+<!--Se non voglio graficare tramite css o component, posso graficare direttamente dal html-->
+<style>
+    h2{
+      color: blue;  
+    }
+</style>
+<!--Posso anche linkare direttamente il mio stylesheet nel template-->
+<link rel="stylesheet" href="/assets/external-style.css">
+<!--Lo troverari nella cartella assets di questo progetto-->
