@@ -2,9 +2,10 @@ h2 {
     color: green;
 }
 
+/*
 body {
     background-color: aquamarine;
-}
+}*/
 
 /* Volendo puoi importare direttamente qui degli stili */
 @import url('../assets/external-style.css');
