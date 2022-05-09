@@ -20,3 +20,9 @@ Say:{{childMessage}}
 <link rel="stylesheet" href="/assets/external-style.css">
 <!--Lo troverari nella cartella assets di questo progetto-->
 
+<!--Per inserire dei contenuti dinamici e reperibili della component usiamo il tag ng content-->
+<!--Ng content sarà utile quando vogliamo fare le injection di un'html in un altro component-->
+<ng-content [question]></ng-content>
+<ng-content [answer]></ng-content>
+<!--Quando mettiamo più di un ng-content = "Multi slot content projection"-->
+<!--I selector question e answer sono come i segnaposto-->

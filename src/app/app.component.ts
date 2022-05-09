@@ -31,4 +31,18 @@ export class AppComponent implements OnInit, OnDestroy {
     else
       return b;
   }
+
+  // Template statement: utile quando voglio aggiornare le proprietà di una classe
+  showText = false; //creo un boolean
+
+  toggleText(event: any): void { //un metodo che al momento non ritorna nulla
+    this.showText = this.showText; // useremo il metodo per vedere il valore in ogni nostra call
+    console.log(event);
+  }
+
+  // Pipes
+  // funzioni che accettano qualsiasi tipo di dato in input e tornato dei dati formattati
+
+  todayDate = new Date();
+  
 }

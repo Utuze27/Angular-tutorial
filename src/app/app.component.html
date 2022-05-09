@@ -12,6 +12,24 @@ Second result is: {{getMin(3,6)}}
 <div class="theme-light"> <!--Per poter utilizzare l'host-context ci serve che il theme sia chiaro-->
 
     <!--Posso richiamare dalla comp dell'app la classe active della child-->
-    <app-child class="active"></app-child>
+    <app-child class="active">
+        <p>Hello from root</p>
+        <h3 question>Is this ng-content cool?</h3>
+        <p answer>Yes, it's amazing!</p>
+    </app-child>
 
 </div>
+
+<!--Template Statement-->
+<!--Creo un button che risponderà ad un click event e richimerà il mio metodo toggle-->
+<button (click)="toggleText($event)">Toggle text</button>
+{{showText}}
+
+<!--Mostriamo la data che abbiamo appena creato-->
+{{todayDate | date}} <!--Con l'operatore | è il richiamo alla pipe built-in per le date, abbiamo reso la data più user friendly-->
+<!--N.B la pipe Date funziona solo con un cambiamento "puro", ovvero quando riscontra un cambio di tipo di dato primitivo, oppure un cambio di riferimento all'oggetto-->
+{{todayDate | date | uppercase}} <!--In questo modo a "concatenare" più pipes insieme-->
+
+<!--Si possono creare delle pipes custom (tramite cmd)-->
+<!--Richiamo la pipe "greetings" appena creata-->
+{{'World' | greetingsPipe}}
