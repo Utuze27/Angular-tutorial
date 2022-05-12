@@ -6,6 +6,8 @@ import { Component, OnInit,OnChanges, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.css'],
   // Attribute Binding: da usare quando non puoi utilizzare la prop. binding nel seguente modo:
   template:'<p [attr.attribute-you-are-targeting] ="expression"></p>'
+  // Event binding = leggo una risposta ad un'azione dell'utente
+  
 })
 
 // implemento la classe con il l'hook per inizializzare
