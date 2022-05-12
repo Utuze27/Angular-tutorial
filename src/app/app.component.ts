@@ -5,9 +5,9 @@ import { Component, OnInit,OnChanges, OnDestroy } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   // Attribute Binding: da usare quando non puoi utilizzare la prop. binding nel seguente modo:
-  template:'<p [attr.attribute-you-are-targeting] ="expression"></p>'
-  // Event binding = leggo una risposta ad un'azione dell'utente
-  
+  //----> template:'<p [attr.attribute-you-are-targeting] ="expression"></p>'
+  // Event binding = leggo una risposta ad un'azione dell'utente, le sintassi è questa:
+  template:'<button (click) ="onSave()">Save</button>'
 })
 
 // implemento la classe con il l'hook per inizializzare
@@ -54,6 +54,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   isUnchanged = true;
 
-  // Attribute Binding
+  // Event Binding = definisco il metodo onSave()
+  onSave(){
+    console.log('click on save');
+  }
 
 }
